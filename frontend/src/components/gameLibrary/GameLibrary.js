@@ -5,13 +5,12 @@ import CustomCardGroup from "../CustomCardGroup";
 import './GameLibrary.css'
 
 function GameLibrary(props){
-    console.log("Library Initialized",props.gameDetail)
     return(
-        <div className='p-3 m-0'>
+        <div className='p-3 m-0 '>
             <h2 className='lead fs-2 mb-4'>{props.title}</h2>
             <Row >
                 {/* Game Filter */}
-                <Col xs={6} md={5} lg={4} xl={3}>
+                <Col xs={3} md={4} lg={2} xl={2}>
                     <p className='lead fs-3 border-bottom pb-3'>Filters</p>
                     <Form>
                     <section className='mb-4'>
@@ -45,8 +44,8 @@ function GameLibrary(props){
                     </Form>
 
                 </Col>
-                <Col xs={6} md={7} lg={8} xl={9} className='p-5 game-scroll'>
-                    <CustomCardGroup gameDetails={props.gameDetail}></CustomCardGroup>
+                <Col xs={9} md={8} lg={10} xl={10} className='game-scroll'>
+                        <CustomCardGroup gameDetails={props.gameDetail}></CustomCardGroup>
                 </Col>
             </Row>
         </div>

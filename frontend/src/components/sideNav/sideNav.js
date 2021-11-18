@@ -5,10 +5,10 @@ import './sideNav.css'
 function SideNav(props){
     return(
       <div className='sidenav'>
-          <p>About</p>
-          <p>Services</p>
-          <p>Clients</p>
-          <p>Contact</p>
+          <p>A</p>
+          <p>B</p>
+          <p>C</p>
+          <p>D</p>
       </div>
 
     )

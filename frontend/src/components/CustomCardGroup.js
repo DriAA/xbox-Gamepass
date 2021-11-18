@@ -1,5 +1,5 @@
 import CustomCard from "./CustomCard"
-import  {Container, Row} from 'react-bootstrap'
+import  {Row} from 'react-bootstrap'
 
 
 
@@ -16,11 +16,9 @@ function CustomCardGroup(props){
 
 
     return(
-    <Container>
-        <Row xs={1}  sm={2} md={2} lg={3} xl={4} className="g-4">
-            {cols}
+        <Row className="g-4 m-auto">
+                {cols}
         </Row>
-    </Container>
 
     )
 }
