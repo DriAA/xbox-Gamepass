@@ -1,13 +1,14 @@
-import {Image, Col} from 'react-bootstrap'
+import { Col, Image} from 'react-bootstrap'
 
-import styles from './CustomCard.module.css'
+import './CustomCard.css'
 
 
 function CustomCard(props){
+
     return (        
-        <Col xs sm='6' md='12' xl='3' className={styles.col}>
-            <div  className={styles.customCard}>
-            <Image className={styles.customCard} src={props.url} fluid />
+        <Col xs sm='6' md='12' xl='3' className='col'>
+            <div className='customCard'>
+                <Image className='customImage' src={props.url}/>
             </div>
         </Col>
     )
