@@ -14,7 +14,6 @@ app.get('/api/xbox/info/:id',async (req, res) =>{
     let ids = req.params.id
     let response = await fetch(`https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=${ids}&market=US&languages=en-us&MS-CV=DGU1mcuYo0WMMp+F.1`)
     let data = await response.json()
-    console.log("Data:", data)
     return res.json(data)
 })
 

@@ -1,0 +1,15 @@
+.headerNav{
+    height: 40px;
+    background-color: rgba(22, 22, 22,.8);
+}
+
+.headerNav li {
+    color: #818181;
+
+}
+
+.headerNav li:hover{
+    color: #f1f1f1;
+
+}
+

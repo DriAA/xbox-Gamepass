@@ -1,10 +1,11 @@
 import  { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXbox } from '@fortawesome/free-brands-svg-icons';
+
 
 // Components
+import HeaderNav from './components/headerNav/HeaderNav.js'
 import SideNav from './components/sideNav/sideNav.js';
 import GameLibrary from './components/gameLibrary/GameLibrary';
+
 import './App.css';
 
 
@@ -42,20 +43,17 @@ function App() {
 
   return (
     <div className="App">
-      <SideNav/>
-
-      <div id='main'>
-        {/* <FontAwesomeIcon className='pulse xbox-logo' icon={faXbox}/> */}
-        <GameLibrary title={'All Games'} gameDetail={gameDetail}/>
-      </div>
-
-
+      <HeaderNav/>
+        <SideNav/>
+        <div id='main'>
+          {/* <FontAwesomeIcon className='pulse xbox-logo' icon={faXbox}/> */}
+          <GameLibrary title={'All Games'} gameDetail={gameDetail}/>
+        </div>
     </div>
 
   );
 
-
-
+  
 }
 
 
