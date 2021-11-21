@@ -3,12 +3,13 @@
     background-color: rgba(22, 22, 22,.8);
 }
 
-.headerNav li {
+.headerNav a {
     color: #818181;
+    text-decoration: none;
 
 }
 
-.headerNav li:hover{
+.headerNav a:hover{
     color: #f1f1f1;
 
 }

@@ -1,17 +1,24 @@
 import  { useEffect, useState } from 'react';
+import { Routes, Route,  } from 'react-router';
 
 
+
+//! Routes
+import StorePage from './Routes/store'
+import SocialPage from './Routes/social'
+import HomePage from './Routes/home'
 // Components
 import HeaderNav from './components/headerNav/HeaderNav.js'
 import SideNav from './components/sideNav/sideNav.js';
 import GameLibrary from './components/gameLibrary/GameLibrary';
+
+
 
 import './App.css';
 
 
 function App() {
   const [gameDetail,setGameDetail] = useState(undefined)
-  const [isloading,setIsLoading] = useState(true)
   
   // Fetch List of All Games w Details
   useEffect(()=>{
@@ -31,7 +38,6 @@ function App() {
         // Set GameDetails to new IDs
         console.log('Data Initialized ... ', data)
         setGameDetail(data.Products)
-        setIsLoading(false)
       })
     })
 
@@ -46,8 +52,13 @@ function App() {
       <HeaderNav/>
         <SideNav/>
         <div id='main'>
+        <Routes>
+          <Route path="/" element={<HomePage/>} />
+          <Route path='/store' element={<StorePage/>}/>
+          <Route path='/social' element={<SocialPage/>}/>
+          <Route path="/all" element={<GameLibrary title={'All Games'} gameDetail={gameDetail}/>} />
+        </Routes>
           {/* <FontAwesomeIcon className='pulse xbox-logo' icon={faXbox}/> */}
-          <GameLibrary title={'All Games'} gameDetail={gameDetail}/>
         </div>
     </div>
 
